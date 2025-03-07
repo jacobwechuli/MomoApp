@@ -1,0 +1,76 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/telemed
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Wechuli2001
+
+  cache:
+    type: simple
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+          jwk-set-uri: http://localhost:8080/.well-known/jwks.json
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: my-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+openai:
+  api-key: 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
+#jwt:
+#  private-key: classpath:keys/private.pem
+#  public-key: classpath:keys/public.pem
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    com.telemed.backend: DEBUG
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: wechulijun@gmail.com
+    password: rsvj okmy jbwg vcql
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+
+
+
+twilio:
+  account-sid: AC24a441a428e98fa8a8e316e2a139cd45
+  auth-token: fa216af1b120abeefa4d76d802a3c3ca
+  phone-number: +16518009696
+
+cache:
+  jwtBlacklist:
+    ttl: 3600
