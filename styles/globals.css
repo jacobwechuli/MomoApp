@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Dark mode base styles */
+.dark body,
+.dark main,
+.dark section,
+.dark footer {
+  background-color: #040406 !important; /* Dark mode background */
+  color: white !important;
+}
+
+/* Light mode background */
+body, 
+main, 
+section, 
+footer {
+  background-color: #FDF5E6 !important;
+}
+
+/* Specific section overrides */
+#projects.min-h-screen,
+#about.py-20,
+#contact.py-20,
+footer.bg-gray-90 {
+  background-color: #FDF5E6 !important;
+}
+
+/* Dark mode specific overrides */
+.dark #projects.min-h-screen,
+.dark #about.py-20,
+.dark #contact.py-20,
+.dark footer.bg-gray-90 {
+  background-color: #040406 !important;
+}
+
+/* Background color for Tailwind utility classes */
+.bg-gray-900 {
+  background-color: #FDF5E6 !important;
+}
+
+/* Dark mode overrides */
+.dark .bg-gray-900 {
+  background-color: #040406 !important;
+}
