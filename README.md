@@ -1,7 +1,3 @@
-Here's the updated **README.md**, now including the **prescription endpoints** from your `PrescriptionController`. 🚀  
-
----
-
 ## **📌 Telemedicine Backend API**
 **Tech Stack:**  
 - **Backend:** Spring Boot (Java)  
