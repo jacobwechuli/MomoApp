@@ -94,4 +94,3 @@ For Kafka, PostgreSQL, and the backend.
 
 ---
 
-Let me know if you want to **add anything else**! 🚀🔥
